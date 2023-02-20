@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "ts-node index.ts"
+    "start": "ts-node async.ts"
   },
   "devDependencies": {
     "@types/node": "^18.14.0",
