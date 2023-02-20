@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 
-export function tester<T extends any[]>(
+export function tester<T extends [any, any]>(
   name: string,
   tests: T[],
   skip = false,
@@ -13,6 +13,8 @@ export function tester<T extends any[]>(
   console.log(chalk.underline(name));
 
   tests.forEach(([test, answer], index) => {
+    if (answer === undefined) return;
+
     if (typeof test === 'object' || typeof answer === 'object') {
       if (JSON.stringify(test) === JSON.stringify(answer)) return ++passed;
     }
