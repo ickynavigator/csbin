@@ -392,7 +392,7 @@ function createSecretHolder<T>(secret: T) {
 
 const obj = createSecretHolder(5);
 
-tester<number | void>('Challenge 13', [
+tester('Challenge 13', [
   [obj.getSecret(), 5],
   [obj.setSecret(2), undefined],
   [obj.getSecret(), 2],

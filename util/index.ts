@@ -1,9 +1,9 @@
 import chalk from 'chalk';
 
-export function tester<T extends any>(
+export function tester<T extends any[]>(
   name: string,
-  tests: [T, T][],
-  skip?: true,
+  tests: T[],
+  skip = false,
 ) {
   if (skip) return;
 
